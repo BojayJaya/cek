@@ -57,7 +57,7 @@ with modeling:
         st.subheader('Modeling')
         st.write("Pilihlah model yang akan dilakukan pengecekkan akurasi:")
         naive = st.checkbox('Gaussian Naive Bayes')
-        k_nn = st.checkbox('K-Nearest Neighboor')
+        k_nn = st.checkbox('K-Nearest Neighbors')
         destree = st.checkbox('Decision Tree')
         submitted = st.form_submit_button("Submit")
 
