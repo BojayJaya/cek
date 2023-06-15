@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from PIL import Image
-import altair as alt
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
@@ -17,7 +15,6 @@ st.write("##### Fadetul Fitriyeh- 200411100189")
 st.write("##### R.Bella Aprilia Damayanti - 200411100082")
 st.write('Dataset yang digunakan yaitu dataset XL AXIATA yang diambil dari yahoo.com')
 
-# data_set_description, upload_data, preprocessing, modeling, implementation = st.beta_columns(5)
 data_set_description, upload_data, preprocessing, modeling, implementation = st.tabs(["Data Set Description", "Upload Data", "Preprocessing", "Modeling", "Implementation"])
 
 with data_set_description:
