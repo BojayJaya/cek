@@ -97,6 +97,10 @@ with implementation:
             input_pred = mod.predict(scaled_input)
             st.write('Menggunakan Model:', model)
             st.write('Volume:', input_pred[0])
+
+            # Menampilkan akurasi model Gaussian Naive Bayes
+            st.write('Akurasi Model:', gaussian_accuracy)
+
         elif model == 'K-Nearest Neighbors':
             K = 10
             mod = KNeighborsClassifier(n_neighbors=K)
@@ -104,9 +108,16 @@ with implementation:
             input_pred = mod.predict(scaled_input)
             st.write('Menggunakan Model:', model)
             st.write('Volume:', input_pred[0])
+
+            # Menampilkan akurasi model K-Nearest Neighbors
+            st.write('Akurasi Model:', knn_accuracy)
+
         elif model == 'Decision Tree':
             mod = DecisionTreeClassifier()
             mod.fit(training, training_label)
             input_pred = mod.predict(scaled_input)
             st.write('Menggunakan Model:', model)
             st.write('Volume:', input_pred[0])
+
+            # Menampilkan akurasi model Decision Tree
+            st.write('Akurasi Model:', dt_accuracy)
