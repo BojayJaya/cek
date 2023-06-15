@@ -94,16 +94,19 @@ with implementation:
         if model == 'Gaussian Naive Bayes':
             mod = GaussianNB()
             mod.fit(training, training_label)
+            input_pred = mod.predict(scaled_input)
+            st.write('Menggunakan Model:', model)
+            st.write('Volume:', input_pred[0])
         elif model == 'K-Nearest Neighbors':
             K = 10
             mod = KNeighborsClassifier(n_neighbors=K)
             mod.fit(training, training_label)
+            input_pred = mod.predict(scaled_input)
+            st.write('Menggunakan Model:', model)
+            st.write('Volume:', input_pred[0])
         elif model == 'Decision Tree':
             mod = DecisionTreeClassifier()
             mod.fit(training, training_label)
-
-        input_pred = mod.predict(scaled_input)
-
-        st.subheader('Hasil Prediksi')
-        st.write('Menggunakan Model:', model)
-        st.write('Volume:', input_pred[0])
+            input_pred = mod.predict(scaled_input)
+            st.write('Menggunakan Model:', model)
+            st.write('Volume:', input_pred[0])
