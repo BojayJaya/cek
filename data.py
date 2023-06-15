@@ -95,13 +95,17 @@ with implementation:
             input_data = np.array([[volume]])
             scaler = MinMaxScaler()
             scaled_input = scaler.fit_transform(input_data)
-            
+
             if model == 'Gaussian Naive Bayes':
-                mod = gaussian
+                mod = GaussianNB()
+                mod.fit(training, training_label)
             elif model == 'K-Nearest Neighbors':
-                mod = knn
+                K = 10
+                mod = KNeighborsClassifier(n_neighbors=K)
+                mod.fit(training, training_label)
             elif model == 'Decision Tree':
-                mod = dt
+                mod = DecisionTreeClassifier()
+                mod.fit(training, training_label)
 
             input_pred = mod.predict(scaled_input)
 
