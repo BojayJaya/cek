@@ -57,6 +57,10 @@ with modeling:
         k_nn = st.checkbox('K-Nearest Neighbors')
         destree = st.checkbox('Decision Tree')
 
+        gaussian_accuracy = 0.0
+        knn_accuracy = 0.0
+        dt_accuracy = 0.0
+
         if naive:
             gaussian = GaussianNB()
             gaussian.fit(training, training_label)
