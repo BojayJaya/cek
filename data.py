@@ -17,7 +17,7 @@ st.write("##### Fadetul Fitriyeh- 200411100189")
 st.write("##### R.Bella Aprilia Damayanti - 200411100082")
 st.write('Dataset yang digunakan yaitu dataset XL AXIATA yang diambil dari yahoo.com')
 
-data_set_description, upload_data, preprocessing, modeling, implementation = st.beta_columns(5)
+data_set_description, upload_data, preprocessing, modeling, implementation = st.tabs(["Data Set Description", "Upload Data", "Preprocessing", "Modeling", "Implementation"])
 
 with data_set_description:
     st.write("""# Data Set Description """)
