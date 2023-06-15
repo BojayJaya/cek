@@ -15,7 +15,7 @@ st.write("##### Fadetul Fitriyeh - 200411100189")
 st.write("##### R.Bella Aprilia Damayanti - 200411100082")
 st.write('Dataset yang digunakan yaitu dataset XL AXIATA yang diambil dari yahoo.com')
 
-data_set_description, upload_data, preprocessing, modeling, implementation = st.tabs(["Data Set Description", "Upload Data", "Preprocessing", "Modeling", "Implementation"])
+data_set_description, upload_data, preprocessing, modeling, implementation = st.columns(5)
 
 with data_set_description:
     st.write("# Data Set Description ")
@@ -97,10 +97,7 @@ with implementation:
             input_pred = mod.predict(scaled_input)
             st.write('Menggunakan Model:', model)
             st.write('Volume:', input_pred[0])
-
-            # Menampilkan akurasi model Gaussian Naive Bayes
             st.write('Akurasi Model:', gaussian_accuracy)
-
         elif model == 'K-Nearest Neighbors':
             K = 10
             mod = KNeighborsClassifier(n_neighbors=K)
@@ -108,16 +105,11 @@ with implementation:
             input_pred = mod.predict(scaled_input)
             st.write('Menggunakan Model:', model)
             st.write('Volume:', input_pred[0])
-
-            # Menampilkan akurasi model K-Nearest Neighbors
             st.write('Akurasi Model:', knn_accuracy)
-
         elif model == 'Decision Tree':
             mod = DecisionTreeClassifier()
             mod.fit(training, training_label)
             input_pred = mod.predict(scaled_input)
             st.write('Menggunakan Model:', model)
             st.write('Volume:', input_pred[0])
-
-            # Menampilkan akurasi model Decision Tree
             st.write('Akurasi Model:', dt_accuracy)
